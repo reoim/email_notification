@@ -4,6 +4,6 @@ EmailConfig:
   Subject: 이메일 제목
   Body: |
     이메일 body 샘플입니다.
-    자동완성이 완료되었습니다.
+    원하는 내용을 추가합니다.
   DefaultRecipients: 
-    - reolee@google.com
+    - recipient@gmail.com
