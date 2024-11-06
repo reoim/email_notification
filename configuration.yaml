@@ -1,0 +1,9 @@
+EmailConfig:
+  Sender: myemail@gmail.com
+  Password: # Gmail app password
+  Subject: 이메일 제목
+  Body: |
+    이메일 body 샘플입니다.
+    자동완성이 완료되었습니다.
+  DefaultRecipients: 
+    - reolee@google.com
