@@ -1,3 +1,6 @@
+# Email Notification
+This repository provides sample python code to send email using Gmail SMTP server. It includes a sample script and instructions for deploying it as a Cloud Run Job, enabling automated or scheduled email notifications.
+
 ## Set configuration.yaml
 This YAML file stores the email settings to be used in the Cloud Run Job. Please refer to the description of each setting item below for configuration.
 
