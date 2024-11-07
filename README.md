@@ -64,9 +64,10 @@ gcloud run jobs deploy $CLOUD_RUN_JOB_NAME \
     --service-account $SERVICE_ACCOUNT_EMAIL
 ```
 
-## Cloud Run Job Excution
+## Cloud Run Job Execution
 ```
 gcloud run jobs execute $CLOUD_RUN_JOB_NAME \
     --region=$REGION \
     --args='--recipient=[Recipient Email Address]'
 ```
+or if you want to execute the job using Client Libraries, please refer to [Exectue Jobs](https://cloud.google.com/run/docs/execute/jobs#client-libraries)
