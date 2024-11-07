@@ -34,7 +34,7 @@ def send_email(config, recipients):
     msg['From'] = config.sender
     msg['To'] = ', '.join(recipients)
     try:
-        with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp_server:
+        with smtplib.SMTP_SSL('smtp.gmail.com', 587) as smtp_server:
             smtp_server.login(config.sender, config.password)
             smtp_server.sendmail(config.sender, recipients, msg.as_string())
         print("Message sent!")
@@ -45,12 +45,12 @@ def send_email(config, recipients):
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--recipient", required=True, type=str)
-    args = parser.parse_args()
+    # parser = argparse.ArgumentParser()
+    # parser.add_argument("--recipient", required=True, type=str)
+    # args = parser.parse_args()
 
     config = EmailConfig.from_yaml('configuration.yaml')
-    config.recipients.append(args.recipient)
-    config.recipients = list(set(config.recipients))  # Remove duplicates
+    # config.recipients.append(args.recipient)
+    # config.recipients = list(set(config.recipients))  # Remove duplicates
 
     send_email(config, config.recipients)
